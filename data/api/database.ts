@@ -13,7 +13,6 @@ class Database {
 
   constructor(userId?: string | undefined | null) {
     this.userId = userId || DEFAULT_USER_ID;
-    console.log(this.userId)
   }
 
   async initIfNeeded() {
