@@ -38,7 +38,7 @@ export default function WorkScreen() {
         Platform.OS === "android" && "pt-safe"
       )}
     >
-      <View className="sm:my-20 sm:w-3/4 sm:self-center">
+      <View className="sm:my-20 sm:w-3/4 sm:self-center flex-1">
         <View className="flex-row align-middle justify-between bg-white px-4 py-4 border-b border-b-shade-2">
           <View className="justify-center px-2">
             <Pressable
