@@ -16,7 +16,6 @@ export default function TabLayout() {
   );
 
   // on a tab route but it's not the last route means we're on a tab subroute
-  // @ts-ignore
   const hideTabs =
     tabRouteIndex !== -1 &&
     tabRouteIndex !== segments.length - 1 &&
@@ -54,10 +53,10 @@ export default function TabLayout() {
 
   const tabList = (
     <TabList>
-      <TabTrigger name="index" href="/" asChild />
-      <TabTrigger name="exhibits" asChild href="/exhibits" reset="always" />
-      <TabTrigger name="visit" asChild href="/visit" />
-      <TabTrigger name="profile" asChild href="/profile" />
+      <TabTrigger name="index" href="/" />
+      <TabTrigger name="exhibits" href="/exhibits" reset="always" />
+      <TabTrigger name="visit" href="/visit" />
+      <TabTrigger name="profile" href="/profile" />
     </TabList>
   );
 
