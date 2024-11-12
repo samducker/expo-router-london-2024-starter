@@ -55,7 +55,7 @@ export default function WorkScreen() {
                 className="active:opacity-50"
                 disabled={favQuery.isLoading || favMutation.isPending}
                 onPress={() => {
-                  favMutation.mutate({ id, status: !isFav });
+                  favMutation.mutate({ workId, status: !isFav });
                 }}
               >
                 <Icon
