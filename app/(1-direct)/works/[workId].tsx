@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Platform, Text } from "react-native";
-import { Link, Redirect, useLocalSearchParams } from "expo-router";
+import { Link, Redirect, useLocalSearchParams, useRouter } from "expo-router";
 import { Image } from "expo-image";
 import { useWorkByIdQuery } from "@/data/hooks/useWorkByIdQuery";
 import { LoadingShade } from "@/components/LoadingShade";
@@ -19,9 +19,19 @@ export default function WorkScreen() {
 
   const { authToken } = useAuth();
 
-  if (authToken) {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (authToken) {
+      router.replace(`/(app)/works/${workId}`, { withAnchor: true });
+    }
+  }, [authToken, router, workId]);
+
+  // whoops, didn't quite make the cut
+
+  /*if (authToken) {
     return <Redirect href={`/(app)/works/${workId}`} withAnchor />;
-  }
+  }*/
 
   return (
     <View
