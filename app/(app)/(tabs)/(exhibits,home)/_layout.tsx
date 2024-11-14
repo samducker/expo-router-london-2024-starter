@@ -17,6 +17,12 @@ export default function StackLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="exhibits/index"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }
